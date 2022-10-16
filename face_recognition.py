@@ -12,7 +12,7 @@ Original file is located at
 from simple_image_download import simple_image_download as simp 
 response = simp.simple_image_download
 
-lst=['Deepika Padukone', 'Anushka Sharma', 'Katrina Kaif','Kriti Sanon','Alia Bhatt']
+lst=['Deepika_Padukone', 'Anushka_Sharma', 'Katrina_Kaif','Kriti_Sanon','Alia_Bhatt']
 
 for rep in lst:
     response().download(rep +'_face' , 500)
