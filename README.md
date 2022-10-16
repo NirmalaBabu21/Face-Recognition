@@ -1,7 +1,7 @@
 Steps to follow:
 
 
-1. Follow Face_Recognition.ipynb
+1. Follow https://github.com/NirmalaBabu21/Face-Recognition/blob/main/Face_Recognition.ipynb
 2. Download and install Visual Studio Code
 3. Follow https://github.com/NirmalaBabu21/Face-Recognition/tree/main/model/server
 4. Follow https://github.com/NirmalaBabu21/Face-Recognition/tree/main/model/UI
