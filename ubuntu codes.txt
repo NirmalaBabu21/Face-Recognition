@@ -63,6 +63,6 @@ sudo apt-get install ffmpeg libsm6 libxext6  -y
 
 pip install PyWavelets
 
-/home/ubuntu/-- change loaction in util
+/home/ubuntu/-- change location in util
 
 python3 server.py
