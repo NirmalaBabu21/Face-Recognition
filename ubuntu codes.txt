@@ -1,0 +1,68 @@
+ssh -i "C:\Users\nimmy\Putty\face.pem" ubuntu@ec2-54-178-107-222.ap-northeast-1.compute.amazonaws.com
+pwd
+ls /etc/init.d
+go to winscp, and copy code there
+pwd
+ls
+sudo apt-get update
+sudo apt-get install nginx
+sudo service nginx status
+:q
+check the ip working or not.. it would be working
+cd /etc/nginx/
+pwd
+ll
+cd sites-enabled/
+ls
+ll
+sudo unlink default    // remove the deault file- because it contains the content in the html file, which loaded in ip address
+ll
+cd ../sites-available
+sudo vim face.conf
+server {
+    listen 80;
+        server_name face;
+        root /home/ubuntu/model/UI;
+        index app.html;
+        location /api/ {
+             rewrite ^/api(.*) $1 break;
+             proxy_pass http://127.0.0.1:5000;
+        }
+}
+:wq
+ll
+cd ../sites-enabled/
+sudo ln -v -s /etc/nginx/sites-available/face.conf inside /etc/nginx/sites-enabled
+ll
+sudo service nginx restart
+-- error{ Job for nginx.service failed because the control process exited with error code. See "systemctl status nginx.service" and "journalctl -xe" for details.}
+sudo unlink inside
+sudo unlink face.conf
+sudo ln -s /etc/nginx/sites-available/face.conf /etc/nginx/sites-enabled/face.conf
+sudo service nginx restart
+sudo service nginx status
+cd ~
+cd model/server
+ls
+python3 -- installed
+ctrl+z
+pip3 -- not installed
+sudo apt install python3-pip
+sudo pip3 install Flask==2.0.1
+sudo pip3 install Flask
+sudo pip3 install numpy
+sudo pip3 install scikit-learn
+sudo pip3 install opencv-python
+sudo apt-get update && apt-get install libgl1
+sudo apt-get update && apt-get install -y python3-opencv
+sudo pip install -U opencv-python
+sudo apt update && apt install -y libsm6 libxext6 ffmpeg libfontconfig1 libxrender1 libgl1-mesa-glx
+
+sudo apt-get update
+sudo apt-get install ffmpeg libsm6 libxext6  -y
+
+pip install PyWavelets
+
+/home/ubuntu/-- change loaction in util
+
+python3 server.py
