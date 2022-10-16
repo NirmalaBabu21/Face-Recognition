@@ -8,7 +8,7 @@ Steps to follow:
 5. Try to exceute the html in port 
 6. Download and install nginx
 7. Try to exceute the html in port 
-8. Create a AWS account, and launch instance EC2
+8. Create a AWS account, and launch instance EC2- Ubuntu Server 20.04
 9. Download and install git bash, winscp
 10. Follow https://github.com/NirmalaBabu21/Face-Recognition/blob/main/ubuntu%20codes.txt
 11. Try to exceute in AWS EC2 
