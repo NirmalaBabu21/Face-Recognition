@@ -18,40 +18,13 @@ function init() {
     dz.on("complete", function (file) {
         let imageData = file.dataURL;
         
-        //var url = "http://127.0.0.1:5000/classify_image";
-        var url = "/api/classify_image";
+        //var url = "http://127.0.0.1:5000/classify_image";  -- try this while running using visual studio
+        var url = "/api/classify_image"; // try with while working with nginx and aws
 
         $.post(url, {
             image_data: file.dataURL
         },function(data, status) {
-            /* 
-            Below is a sample response if you have two faces in an image lets say virat and roger together.
-            Most of the time if there is one person in the image you will get only one element in below array
-            data = [
-                {
-                    class: "Sachin Tendulkar face",
-                    class_probability: [1.05, 12.67, 22.00, 4.5, 91.56],
-                    class_dictionary: {
-                        lionel_messi: 0,
-                        maria_sharapova: 1,
-                        roger_federer: 2,
-                        serena_williams: 3,
-                        virat_kohli: 4
-                    }
-                },
-                {
-                    class: "roder_federer",
-                    class_probability: [7.02, 23.7, 52.00, 6.1, 1.62],
-                    class_dictionary: {
-                        lionel_messi: 0,
-                        maria_sharapova: 1,
-                        roger_federer: 2,
-                        serena_williams: 3,
-                        virat_kohli: 4
-                    }
-                }
-            ]
-            */
+           
             console.log(data);
             if (!data || data.length==0) {
                 $("#resultHolder").hide();
