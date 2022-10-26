@@ -1,0 +1,12 @@
+1. Edit the nginx configuration file, run the nginx
+2. Login into AWS, to check whether the instance is running or not
+3. Open the gitbash, and run the below comments,
+
+ssh -i "C:\Users\nimmy\Putty\face.pem" ubuntu@ec2-54-178-107-222.ap-northeast-1.compute.amazonaws.com
+pwd
+sudo apt-get update
+sudo service nginx status
+cd ~
+cd model/server
+ls
+python3 server.py
